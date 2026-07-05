@@ -1,0 +1,83 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="100%" height="100%" viewBox="0 0 1440 1000" preserveAspectRatio="xMidYMid slice" font-family="Poppins, Inter, 'Segoe UI', sans-serif">
+  <defs>
+    <linearGradient id="hvSky" x1="0" y1="0" x2="0.6" y2="1">
+      <stop offset="0" stop-color="#0a1526"/>
+      <stop offset="0.55" stop-color="#0b1b31"/>
+      <stop offset="1" stop-color="#081120"/>
+    </linearGradient>
+    <radialGradient id="hvGlowCyan" cx="0.5" cy="0.5" r="0.5">
+      <stop offset="0" stop-color="#22d3ee" stop-opacity="0.55"/>
+      <stop offset="1" stop-color="#22d3ee" stop-opacity="0"/>
+    </radialGradient>
+    <radialGradient id="hvGlowTeal" cx="0.5" cy="0.5" r="0.5">
+      <stop offset="0" stop-color="#2dd4bf" stop-opacity="0.4"/>
+      <stop offset="1" stop-color="#2dd4bf" stop-opacity="0"/>
+    </radialGradient>
+    <radialGradient id="hvGlowIndigo" cx="0.5" cy="0.5" r="0.5">
+      <stop offset="0" stop-color="#4f46e5" stop-opacity="0.42"/>
+      <stop offset="1" stop-color="#4f46e5" stop-opacity="0"/>
+    </radialGradient>
+    <radialGradient id="hvVignette" cx="0.5" cy="0.42" r="0.75">
+      <stop offset="0.55" stop-color="#000000" stop-opacity="0"/>
+      <stop offset="1" stop-color="#04070d" stop-opacity="0.55"/>
+    </radialGradient>
+    <radialGradient id="hvNode" cx="0.5" cy="0.5" r="0.5">
+      <stop offset="0" stop-color="#a5f3fc" stop-opacity="0.9"/>
+      <stop offset="0.35" stop-color="#22d3ee" stop-opacity="0.55"/>
+      <stop offset="1" stop-color="#22d3ee" stop-opacity="0"/>
+    </radialGradient>
+    <filter id="hvSoft" x="-40%" y="-40%" width="180%" height="180%">
+      <feGaussianBlur stdDeviation="60"/>
+    </filter>
+    <pattern id="hvDots" width="46" height="46" patternUnits="userSpaceOnUse">
+      <circle cx="2" cy="2" r="1.3" fill="#9fd8e6" opacity="0.06"/>
+    </pattern>
+  </defs>
+
+  <rect width="1440" height="1000" fill="url(#hvSky)"/>
+
+  <!-- soft aurora glows (calm, blurred) -->
+  <ellipse cx="1040" cy="300" rx="440" ry="330" fill="url(#hvGlowCyan)" filter="url(#hvSoft)"/>
+  <ellipse cx="330"  cy="770" rx="420" ry="300" fill="url(#hvGlowTeal)" filter="url(#hvSoft)"/>
+  <ellipse cx="1180" cy="860" rx="380" ry="300" fill="url(#hvGlowIndigo)" filter="url(#hvSoft)"/>
+
+  <!-- faint dot grid for gentle texture -->
+  <rect width="1440" height="1000" fill="url(#hvDots)" opacity="0.5"/>
+
+  <!-- sparse connected-systems constellation -->
+  <g stroke="#7dd3fc" stroke-opacity="0.28" stroke-width="1.4" fill="none">
+    <line x1="470" y1="360" x2="690" y2="250"/>
+    <line x1="690" y1="250" x2="930" y2="330"/>
+    <line x1="930" y1="330" x2="1080" y2="210"/>
+    <line x1="690" y1="250" x2="760" y2="470"/>
+    <line x1="760" y1="470" x2="980" y2="540"/>
+    <line x1="930" y1="330" x2="980" y2="540"/>
+    <line x1="470" y1="360" x2="760" y2="470"/>
+    <line x1="1080" y1="210" x2="1210" y2="400"/>
+    <line x1="980" y1="540" x2="1210" y2="400"/>
+  </g>
+
+  <!-- node glows -->
+  <g>
+    <circle cx="470"  cy="360" r="34" fill="url(#hvNode)"/>
+    <circle cx="690"  cy="250" r="46" fill="url(#hvNode)"/>
+    <circle cx="930"  cy="330" r="40" fill="url(#hvNode)"/>
+    <circle cx="1080" cy="210" r="32" fill="url(#hvNode)"/>
+    <circle cx="760"  cy="470" r="34" fill="url(#hvNode)"/>
+    <circle cx="980"  cy="540" r="44" fill="url(#hvNode)"/>
+    <circle cx="1210" cy="400" r="30" fill="url(#hvNode)"/>
+  </g>
+  <!-- node cores -->
+  <g fill="#e0fbff">
+    <circle cx="470"  cy="360" r="4.5"/>
+    <circle cx="690"  cy="250" r="6"/>
+    <circle cx="930"  cy="330" r="5"/>
+    <circle cx="1080" cy="210" r="4"/>
+    <circle cx="760"  cy="470" r="4.5"/>
+    <circle cx="980"  cy="540" r="6"/>
+    <circle cx="1210" cy="400" r="4"/>
+  </g>
+
+  <!-- calm vignette to frame the eye -->
+  <rect width="1440" height="1000" fill="url(#hvVignette)"/>
+</svg>

@@ -1,0 +1,99 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 760 520" font-family="Inter, 'Segoe UI', sans-serif">
+  <defs>
+    <linearGradient id="wsBg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#231433"/>
+      <stop offset="1" stop-color="#120a1e"/>
+    </linearGradient>
+    <linearGradient id="wsHero" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#ec4899"/>
+      <stop offset="1" stop-color="#8b5cf6"/>
+    </linearGradient>
+    <linearGradient id="wsBtn" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0" stop-color="#f472b6"/>
+      <stop offset="1" stop-color="#a78bfa"/>
+    </linearGradient>
+  </defs>
+  <rect width="760" height="520" fill="url(#wsBg)"/>
+
+  <!-- browser window -->
+  <rect x="24" y="26" width="560" height="360" rx="16" fill="#0f0a1c" stroke="#2c2044"/>
+  <!-- browser chrome -->
+  <rect x="24" y="26" width="560" height="42" rx="16" fill="#1a1230"/>
+  <rect x="24" y="52" width="560" height="16" fill="#1a1230"/>
+  <circle cx="48" cy="47" r="6" fill="#ff5f56"/>
+  <circle cx="70" cy="47" r="6" fill="#ffbd2e"/>
+  <circle cx="92" cy="47" r="6" fill="#27c93f"/>
+  <rect x="120" y="36" width="360" height="22" rx="11" fill="#0f0a1c" stroke="#2c2044"/>
+  <text x="140" y="51" fill="#8b7fb0" font-size="11">www.yourbrand.co.tz</text>
+
+  <!-- website canvas: nav -->
+  <text x="52" y="98" fill="#f5ecff" font-size="13" font-weight="800">BRAND</text>
+  <g fill="#6d5f92" font-size="10">
+    <rect x="360" y="88" width="34" height="8" rx="4"/>
+    <rect x="404" y="88" width="34" height="8" rx="4"/>
+    <rect x="448" y="88" width="34" height="8" rx="4"/>
+  </g>
+  <rect x="500" y="84" width="60" height="18" rx="9" fill="url(#wsBtn)"/>
+
+  <!-- website canvas: hero -->
+  <rect x="52" y="120" width="290" height="150" rx="12" fill="url(#wsHero)"/>
+  <rect x="72" y="150" width="150" height="14" rx="7" fill="#ffffff" opacity="0.95"/>
+  <rect x="72" y="176" width="210" height="9" rx="4.5" fill="#ffffff" opacity="0.6"/>
+  <rect x="72" y="192" width="180" height="9" rx="4.5" fill="#ffffff" opacity="0.6"/>
+  <rect x="72" y="222" width="96" height="26" rx="13" fill="#ffffff"/>
+  <text x="88" y="239" fill="#7c3aed" font-size="11" font-weight="700">Get Started</text>
+
+  <!-- website canvas: image block -->
+  <rect x="358" y="120" width="204" height="150" rx="12" fill="#1c1436" stroke="#2c2044"/>
+  <circle cx="460" cy="180" r="26" fill="#2a1f4d"/>
+  <path d="M420 232 L448 200 L470 222 L500 190 L520 232 Z" fill="#3a2c66"/>
+
+  <!-- website canvas: feature row -->
+  <g>
+    <rect x="52"  y="290" width="160" height="76" rx="10" fill="#1c1436" stroke="#2c2044"/>
+    <rect x="216" y="290" width="160" height="76" rx="10" fill="#1c1436" stroke="#2c2044"/>
+    <rect x="380" y="290" width="182" height="76" rx="10" fill="#1c1436" stroke="#2c2044"/>
+    <circle cx="72"  cy="312" r="9" fill="#f472b6"/>
+    <circle cx="236" cy="312" r="9" fill="#a78bfa"/>
+    <circle cx="400" cy="312" r="9" fill="#38bdf8"/>
+    <rect x="90"  y="308" width="70" height="7" rx="3.5" fill="#4a3d6e"/>
+    <rect x="254" y="308" width="70" height="7" rx="3.5" fill="#4a3d6e"/>
+    <rect x="418" y="308" width="90" height="7" rx="3.5" fill="#4a3d6e"/>
+    <rect x="72"  y="332" width="110" height="6" rx="3" fill="#332a4f"/>
+    <rect x="236" y="332" width="110" height="6" rx="3" fill="#332a4f"/>
+    <rect x="400" y="332" width="130" height="6" rx="3" fill="#332a4f"/>
+    <rect x="72"  y="346" width="86" height="6" rx="3" fill="#332a4f"/>
+    <rect x="236" y="346" width="86" height="6" rx="3" fill="#332a4f"/>
+    <rect x="400" y="346" width="96" height="6" rx="3" fill="#332a4f"/>
+  </g>
+
+  <!-- design tools panel (right) -->
+  <rect x="600" y="26" width="136" height="360" rx="16" fill="#181026" stroke="#2c2044"/>
+  <text x="620" y="54" fill="#d8c9f0" font-size="12" font-weight="700">Design</text>
+
+  <text x="620" y="86" fill="#8b7fb0" font-size="10">Palette</text>
+  <circle cx="628" cy="106" r="11" fill="#ec4899"/>
+  <circle cx="656" cy="106" r="11" fill="#8b5cf6"/>
+  <circle cx="684" cy="106" r="11" fill="#38bdf8"/>
+  <circle cx="712" cy="106" r="11" fill="#34d399"/>
+  <circle cx="628" cy="134" r="11" fill="#f59e0b"/>
+  <circle cx="656" cy="134" r="11" fill="#f43f5e"/>
+  <circle cx="684" cy="134" r="11" fill="#0f0a1c" stroke="#3a2c66"/>
+  <circle cx="712" cy="134" r="11" fill="#e2e8f0"/>
+
+  <text x="620" y="176" fill="#8b7fb0" font-size="10">Typography</text>
+  <text x="620" y="202" fill="#f5ecff" font-size="19" font-weight="800">Aa</text>
+  <rect x="656" y="188" width="60" height="8" rx="4" fill="#4a3d6e"/>
+  <rect x="656" y="202" width="44" height="8" rx="4" fill="#332a4f"/>
+
+  <text x="620" y="240" fill="#8b7fb0" font-size="10">Layout</text>
+  <rect x="620" y="252" width="42" height="30" rx="6" fill="#2a1f4d"/>
+  <rect x="670" y="252" width="42" height="30" rx="6" fill="url(#wsBtn)"/>
+  <rect x="620" y="292" width="92" height="18" rx="9" fill="#2a1f4d"/>
+
+  <rect x="620" y="330" width="96" height="30" rx="15" fill="url(#wsBtn)"/>
+  <text x="640" y="350" fill="#1a0e2e" font-size="11" font-weight="800">Publish</text>
+
+  <!-- cursor pointer over Get Started button -->
+  <path d="M150 236 L150 268 L158 260 L164 274 L172 270 L166 256 L178 256 Z" fill="#ffffff" stroke="#7c3aed" stroke-width="1.5" stroke-linejoin="round"/>
+</svg>

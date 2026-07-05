@@ -1,0 +1,64 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 760 520" font-family="Inter, 'Segoe UI', sans-serif">
+  <defs>
+    <linearGradient id="mfBg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#0c2b22"/>
+      <stop offset="1" stop-color="#07160f"/>
+    </linearGradient>
+    <linearGradient id="mfArea" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#34d399" stop-opacity="0.55"/>
+      <stop offset="1" stop-color="#34d399" stop-opacity="0"/>
+    </linearGradient>
+    <linearGradient id="mfLine" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0" stop-color="#6ee7b7"/>
+      <stop offset="1" stop-color="#10b981"/>
+    </linearGradient>
+  </defs>
+  <rect width="760" height="520" fill="url(#mfBg)"/>
+
+  <!-- top window bar with tabs (no sidebar — different from school) -->
+  <rect x="0" y="0" width="760" height="66" fill="#0a2018"/>
+  <circle cx="36" cy="33" r="7" fill="#10b981"/>
+  <text x="58" y="39" fill="#eafff5" font-size="19" font-weight="700">Kopa Microfinance</text>
+  <g font-size="13" font-weight="600">
+    <text x="430" y="38" fill="#5ff0b8">Overview</text>
+    <text x="530" y="38" fill="#3f6d5b">Loans</text>
+    <text x="610" y="38" fill="#3f6d5b">Savings</text>
+    <text x="690" y="38" fill="#3f6d5b">Risk</text>
+  </g>
+  <rect x="426" y="52" width="66" height="3" rx="2" fill="#34d399"/>
+
+  <!-- KPI strip -->
+  <g>
+    <rect x="28" y="86" width="220" height="80" rx="14" fill="#0e2a20" stroke="#1c4536"/>
+    <text x="46" y="112" fill="#7fbfa4" font-size="12">Portfolio Value</text>
+    <text x="46" y="146" fill="#eafff5" font-size="24" font-weight="800">TZS 318M</text>
+  </g>
+  <g>
+    <rect x="262" y="86" width="220" height="80" rx="14" fill="#0e2a20" stroke="#1c4536"/>
+    <text x="280" y="112" fill="#7fbfa4" font-size="12">Active Loans</text>
+    <text x="280" y="146" fill="#eafff5" font-size="24" font-weight="800">1,472</text>
+  </g>
+  <g>
+    <rect x="496" y="86" width="236" height="80" rx="14" fill="#0e2a20" stroke="#1c4536"/>
+    <text x="514" y="112" fill="#7fbfa4" font-size="12">Repayment Rate</text>
+    <text x="514" y="146" fill="#eafff5" font-size="24" font-weight="800">94.6%</text>
+  </g>
+
+  <!-- big area/line chart -->
+  <rect x="28" y="182" width="454" height="228" rx="14" fill="#0e2a20" stroke="#1c4536"/>
+  <text x="48" y="212" fill="#d6f5e7" font-size="14" font-weight="600">Disbursements &amp; Recovery</text>
+  <line x1="48" y1="248" x2="462" y2="248" stroke="#153a2c" stroke-dasharray="3 5"/>
+  <line x1="48" y1="300" x2="462" y2="300" stroke="#153a2c" stroke-dasharray="3 5"/>
+  <line x1="48" y1="352" x2="462" y2="352" stroke="#153a2c" stroke-dasharray="3 5"/>
+  <path d="M48,360 L108,330 L168,344 L228,296 L288,312 L348,262 L408,286 L462,244 L462,388 L48,388 Z" fill="url(#mfArea)"/>
+  <path d="M48,360 L108,330 L168,344 L228,296 L288,312 L348,262 L408,286 L462,244" fill="none" stroke="url(#mfLine)" stroke-width="3.5" stroke-linecap="round" stroke-linejoin="round"/>
+  <circle cx="348" cy="262" r="5" fill="#eafff5" stroke="#10b981" stroke-width="3"/>
+
+  <!-- donut portfolio split -->
+  <rect x="496" y="182" width="236" height="228" rx="14" fill="#0e2a20" stroke="#1c4536"/>
+  <text x="514" y="212" fill="#d6f5e7" font-size="14" font-weight="600">Loan Health</text>
+  <circle cx="614" cy="304" r="56" fill="none" stroke="#10402f" stroke-width="18"/>
+  <circle cx="614" cy="304" r="56" fill="none" stroke="url(#mfLine)" stroke-width="18" stroke-linecap="round" stroke-dasharray="264 352" transform="rotate(-90 614 304)"/>
+  <circle cx="614" cy="304" r="56" fill="none" stroke="#f59e0b" stroke-width="18" stroke-linecap="round" stroke-dasharray="40 352" transform="rotate(155 614 304)"/>
+  <text x="588" y="310" fill="#eafff5" font-size="20" font-weight="800">75%</text>
+</svg>

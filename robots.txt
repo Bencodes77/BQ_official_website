@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://bqtech.co.tz/sitemap.xml
