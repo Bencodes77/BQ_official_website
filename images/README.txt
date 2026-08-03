@@ -4,7 +4,8 @@ Current production assets:
 
   logo.png                    Original high-resolution company logo
   logo-web.png                Optimized website and favicon logo
-  og-bq-technologies.png      Social sharing preview
+  hero-bg.jpg                 Dar es Salaam skyline used in the homepage hero
+  og-bq-technologies-light.png  Social sharing preview
   team-benson.jpg             Benson Kimaro
   team-queen.jpg              Queen Benson
   team-kelvin.jpg             Kelvin Kimaro

@@ -2,106 +2,107 @@
 
 ## Direction
 
-Premium, calm and technically capable. The website uses one intentional dark identity, an editorial information hierarchy and restrained motion. Every visual element must explain, guide or establish trust.
+Clear, established and approachable. The website uses a light corporate identity, direct photography, strong information hierarchy and familiar interaction patterns. It should feel like a real Tanzanian technology business—not an abstract startup template.
 
-## Core principles
+## Principles
 
-1. Clarity before decoration.
-2. Factual language before marketing claims.
-3. Editorial layouts before repeated cards.
-4. One controlled accent colour.
-5. Motion should be subtle and optional.
-6. Mobile layouts must be intentionally composed.
+1. Make the company understandable in the first viewport.
+2. Use real context and photography before abstract decoration.
+3. Keep layouts structured, familiar and easy to scan.
+4. Use one confident accent colour with neutral supporting colours.
+5. Prefer clear service descriptions over marketing effects.
+6. Keep claims factual and supportable.
 
 ## Colour
 
 | Role | Value |
 | --- | --- |
-| Primary background | `#050A10` |
-| Secondary dark surface | `#09111B` |
-| Raised dark surface | `#0D1723` |
-| Light editorial background | `#EEF3F7` |
-| Secondary light background | `#DFE7ED` |
-| Primary light text | `#F7FAFC` |
-| Secondary light text | `#A8B5C1` |
-| Primary dark text | `#0B1420` |
-| Secondary dark text | `#53616E` |
-| Accent | `#35BDF5` |
-| Accent highlight | `#74D7FF` |
+| Page | `#FFFFFF` |
+| Warm section | `#F6F3ED` |
+| Cool section | `#EDF2F3` |
+| Primary ink | `#15232E` |
+| Secondary text | `#687781` |
+| Deep navy | `#102534` |
+| Primary accent | `#D84A32` |
+| Accent hover | `#B83824` |
+| Accent tint | `#F7E7E2` |
+| WhatsApp brand | `#1FB75B` |
+| Border | `#DCE3E6` |
 
-Do not introduce purple, pink, orange or rainbow gradients. Cyan is used for navigation feedback, primary actions, small labels and the branded systems motif.
+The vermilion accent is used for primary actions, section labels, small rules and focus states. Avoid gradients, neon colours and decorative glow.
 
 ## Typography
 
-- Family: Inter
+- Family: IBM Plex Sans
+- Headings: 600
 - Body: 400–500
 - Labels and actions: 600–700
-- Headings: 500 with tight tracking
-- Display scale: responsive `clamp()` values
-- Body copy should stay below approximately 68 characters per line
+- Headings use tight but readable tracking
+- Body copy should remain below approximately 68 characters per line
 
 ## Layout
 
 - Maximum content width: 1180px
 - Desktop side margin: 24px minimum
 - Mobile side margin: 16px
-- Section spacing: 96–144px desktop, 88px mobile
-- Grid and alignment should carry the visual system; avoid decorative containers
-
-## Shape and depth
-
-- Small radius: 8px
-- Medium radius: 14px
-- Large radius: 22px, reserved for the hero composition
-- Use thin borders instead of heavy shadows
-- Glass is limited to the sticky header and hero system frame
-
-## Motion
-
-- Reveal: 700ms, 22px maximum travel
-- Controls: 180–250ms
-- No looping background movement
-- No scroll hijacking or parallax
-- All motion must collapse under `prefers-reduced-motion`
+- Desktop section spacing: 88–136px
+- Mobile section spacing: approximately 80px
+- Use square or lightly rounded geometry; default radius is 4px
 
 ## Components
 
+### Header
+
+A narrow navy contact bar sits above a white sticky navigation bar. Navigation is concise and the contact action is always clear.
+
+### Hero
+
+Two-column layout with direct business copy and real Tanzania photography. No abstract orbit, fake interface, dashboard, gradient headline or glass panel.
+
+### Service grid
+
+Simple bordered service blocks with consistent line icons. Cards do not float, glow or use heavy shadows.
+
 ### Buttons
 
-Solid cyan, dark text, 8px radius and a small vertical hover shift. Use one primary CTA per major decision point.
+Solid vermilion with white text. Secondary buttons use an ink border and transparent background.
 
-### Service rows
+### Footer
 
-Numbered editorial rows separated by hairlines. Do not convert them into identical icon cards.
+A structured deep-navy footer with a prominent conversation prompt, service/company/contact columns and recognisable social icons.
 
-### Forms
+### WhatsApp
 
-Dark solid inputs with visible cyan focus states, explicit labels and honest descriptions of what submission does.
+Use the dedicated floating green WhatsApp control with an accessible label. Do not duplicate floating controls.
 
-### Team
+## Motion
 
-Photography is quiet and consistent. Roles are factual and biographies are optional.
+- Content reveal: 600ms with 18px maximum travel
+- Control feedback: 180ms
+- No looping effects, parallax or animated backgrounds
+- Respect `prefers-reduced-motion`
 
-## Forbidden patterns
+## Avoid
 
-- Theme toggles
-- Fake dashboards, terminals, charts or statistics
-- Unsupported claims and guarantees
-- Repeated glowing cards
-- Decorative icon grids
-- Excessive pills, badges or floating controls
-- Generic AI brains, robots, shields and circuit imagery
-- Newsletter success states without a real subscription service
+- Full dark themes
+- Cyan-on-navy startup styling
+- Abstract system or orbit diagrams
+- Fake dashboards, terminals and charts
+- Unsupported statistics or guarantees
+- Excessive rounded cards
+- Glassmorphism and glow
+- Multiple competing accents
+- Newsletter success states without a real service
 
 ## Delivery checklist
 
 - Semantic heading order
 - Keyboard-operable navigation and disclosure controls
 - Visible focus states
-- Accurate alt text
+- Recognisable social and WhatsApp icons
 - No horizontal overflow at 375px
 - Responsive checks at 375px, 768px, 1024px and 1440px
 - Reduced-motion support
-- Valid internal links
+- Valid internal and external links
 - No unsupported claims
 - Metadata, sitemap, privacy and terms aligned with current functionality
