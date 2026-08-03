@@ -30,7 +30,7 @@
       return;
     }
 
-    var subject = "Project enquiry — " + service;
+    var subject = "Project enquiry: " + service;
     var body = [
       "Hello BQ Technologies,",
       "",

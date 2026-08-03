@@ -268,12 +268,33 @@ img {
   justify-self: start;
   gap: 0.7rem;
   color: var(--ink);
-  font-size: 0.93rem;
   font-weight: 500;
 }
 
-.brand strong {
+.brand-copy {
+  display: grid;
+  gap: 0.2rem;
+  line-height: 1;
+}
+
+.brand-name {
+  color: inherit;
+  font-size: 0.93rem;
+  font-weight: 600;
+  letter-spacing: -0.02em;
+  white-space: nowrap;
+}
+
+.brand-name strong {
   font-weight: 700;
+}
+
+.brand-tagline {
+  color: #8b7763;
+  font-size: 0.66rem;
+  font-weight: 500;
+  letter-spacing: 0.01em;
+  white-space: nowrap;
 }
 
 .brand-mark {
@@ -451,19 +472,12 @@ img {
 .hero-location {
   display: flex;
   align-items: center;
-  gap: 0.65rem;
   margin-top: clamp(3rem, 7vh, 5rem);
   color: rgba(255, 255, 255, 0.72);
   font-size: 0.72rem;
   font-weight: 600;
   letter-spacing: 0.08em;
   text-transform: uppercase;
-}
-
-.hero-location span {
-  width: 26px;
-  height: 1px;
-  background: #ff8e79;
 }
 
 .benefit-strip {
@@ -611,12 +625,6 @@ img {
   color: #53636e;
   font-size: 0.77rem;
   list-style: none;
-}
-
-.service-card li::before {
-  content: "—";
-  margin-right: 0.35rem;
-  color: var(--accent);
 }
 
 .service-card-wide > p { max-width: 760px; }
@@ -1017,6 +1025,10 @@ img {
   color: white;
 }
 
+.brand-footer .brand-tagline {
+  color: rgba(255, 255, 255, 0.58);
+}
+
 .footer-brand > p {
   max-width: 370px;
   margin-top: 1.3rem;
@@ -1302,7 +1314,8 @@ img {
 }
 
 @media (max-width: 520px) {
-  .brand span { font-size: 0.84rem; }
+  .brand-name { font-size: 0.84rem; }
+  .brand-tagline { font-size: 0.6rem; }
   .hero { min-height: 680px; }
   .hero::before {
     background:
