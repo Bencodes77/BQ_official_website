@@ -1,212 +1,107 @@
-# Design System Master File
+# BQ Technologies — Design System
 
-> **LOGIC:** When building a specific page, first check `design-system/pages/[page-name].md`.
-> If that file exists, its rules **override** this Master file.
-> If not, strictly follow the rules below.
+## Direction
 
----
+Premium, calm and technically capable. The website uses one intentional dark identity, an editorial information hierarchy and restrained motion. Every visual element must explain, guide or establish trust.
 
-**Project:** BQ Technologies
-**Generated:** 2026-07-05 11:02:29
-**Category:** B2B Service
-**Design Dials:** Variance 3/10 (Centered / Minimal) | Density 4/10 (Standard)
+## Core principles
 
----
+1. Clarity before decoration.
+2. Factual language before marketing claims.
+3. Editorial layouts before repeated cards.
+4. One controlled accent colour.
+5. Motion should be subtle and optional.
+6. Mobile layouts must be intentionally composed.
 
-## Global Rules
+## Colour
 
-### Color Palette
+| Role | Value |
+| --- | --- |
+| Primary background | `#050A10` |
+| Secondary dark surface | `#09111B` |
+| Raised dark surface | `#0D1723` |
+| Light editorial background | `#EEF3F7` |
+| Secondary light background | `#DFE7ED` |
+| Primary light text | `#F7FAFC` |
+| Secondary light text | `#A8B5C1` |
+| Primary dark text | `#0B1420` |
+| Secondary dark text | `#53616E` |
+| Accent | `#35BDF5` |
+| Accent highlight | `#74D7FF` |
 
-| Role | Hex | CSS Variable |
-|------|-----|--------------|
-| Primary | `#0F172A` | `--color-primary` |
-| On Primary | `#FFFFFF` | `--color-on-primary` |
-| Secondary | `#334155` | `--color-secondary` |
-| Accent/CTA | `#0369A1` | `--color-accent` |
-| Background | `#F8FAFC` | `--color-background` |
-| Foreground | `#020617` | `--color-foreground` |
-| Muted | `#E8ECF1` | `--color-muted` |
-| Border | `#E2E8F0` | `--color-border` |
-| Destructive | `#DC2626` | `--color-destructive` |
-| Ring | `#0F172A` | `--color-ring` |
+Do not introduce purple, pink, orange or rainbow gradients. Cyan is used for navigation feedback, primary actions, small labels and the branded systems motif.
 
-**Color Notes:** Professional navy + blue CTA
+## Typography
 
-### Typography
+- Family: Inter
+- Body: 400–500
+- Labels and actions: 600–700
+- Headings: 500 with tight tracking
+- Display scale: responsive `clamp()` values
+- Body copy should stay below approximately 68 characters per line
 
-- **Heading Font:** Poppins
-- **Body Font:** Open Sans
-- **Mood:** modern, professional, clean, corporate, friendly, approachable
-- **Google Fonts:** [Poppins + Open Sans](https://fonts.google.com/share?selection.family=Open+Sans:wght@300;400;500;600;700|Poppins:wght@400;500;600;700)
+## Layout
 
-**CSS Import:**
-```css
-@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;500;600;700&family=Poppins:wght@400;500;600;700&display=swap');
-```
+- Maximum content width: 1180px
+- Desktop side margin: 24px minimum
+- Mobile side margin: 16px
+- Section spacing: 96–144px desktop, 88px mobile
+- Grid and alignment should carry the visual system; avoid decorative containers
 
-### Spacing Variables
+## Shape and depth
 
-*Density: 4/10 — Standard*
+- Small radius: 8px
+- Medium radius: 14px
+- Large radius: 22px, reserved for the hero composition
+- Use thin borders instead of heavy shadows
+- Glass is limited to the sticky header and hero system frame
 
-| Token | Value | Usage |
-|-------|-------|-------|
-| `--space-xs` | `4px` / `0.25rem` | Tight gaps |
-| `--space-sm` | `8px` / `0.5rem` | Icon gaps, inline spacing |
-| `--space-md` | `16px` / `1rem` | Standard padding |
-| `--space-lg` | `24px` / `1.5rem` | Section padding |
-| `--space-xl` | `32px` / `2rem` | Large gaps |
-| `--space-2xl` | `48px` / `3rem` | Section margins |
-| `--space-3xl` | `64px` / `4rem` | Hero padding |
+## Motion
 
-### Shadow Depths
+- Reveal: 700ms, 22px maximum travel
+- Controls: 180–250ms
+- No looping background movement
+- No scroll hijacking or parallax
+- All motion must collapse under `prefers-reduced-motion`
 
-| Level | Value | Usage |
-|-------|-------|-------|
-| `--shadow-sm` | `0 1px 2px rgba(0,0,0,0.05)` | Subtle lift |
-| `--shadow-md` | `0 4px 6px rgba(0,0,0,0.1)` | Cards, buttons |
-| `--shadow-lg` | `0 10px 15px rgba(0,0,0,0.1)` | Modals, dropdowns |
-| `--shadow-xl` | `0 20px 25px rgba(0,0,0,0.15)` | Hero images, featured cards |
-
----
-
-## Component Specs
+## Components
 
 ### Buttons
 
-```css
-/* Primary Button */
-.btn-primary {
-  background: #0369A1;
-  color: white;
-  padding: 12px 24px;
-  border-radius: 8px;
-  font-weight: 600;
-  transition: all 200ms ease;
-  cursor: pointer;
-}
+Solid cyan, dark text, 8px radius and a small vertical hover shift. Use one primary CTA per major decision point.
 
-.btn-primary:hover {
-  opacity: 0.9;
-  transform: translateY(-1px);
-}
+### Service rows
 
-/* Secondary Button */
-.btn-secondary {
-  background: transparent;
-  color: #0F172A;
-  border: 2px solid #0F172A;
-  padding: 12px 24px;
-  border-radius: 8px;
-  font-weight: 600;
-  transition: all 200ms ease;
-  cursor: pointer;
-}
-```
+Numbered editorial rows separated by hairlines. Do not convert them into identical icon cards.
 
-### Cards
+### Forms
 
-```css
-.card {
-  background: #F8FAFC;
-  border-radius: 12px;
-  padding: 24px;
-  box-shadow: var(--shadow-md);
-  transition: all 200ms ease;
-  cursor: pointer;
-}
+Dark solid inputs with visible cyan focus states, explicit labels and honest descriptions of what submission does.
 
-.card:hover {
-  box-shadow: var(--shadow-lg);
-  transform: translateY(-2px);
-}
-```
+### Team
 
-### Inputs
+Photography is quiet and consistent. Roles are factual and biographies are optional.
 
-```css
-.input {
-  padding: 12px 16px;
-  border: 1px solid #E2E8F0;
-  border-radius: 8px;
-  font-size: 16px;
-  transition: border-color 200ms ease;
-}
+## Forbidden patterns
 
-.input:focus {
-  border-color: #0F172A;
-  outline: none;
-  box-shadow: 0 0 0 3px #0F172A20;
-}
-```
+- Theme toggles
+- Fake dashboards, terminals, charts or statistics
+- Unsupported claims and guarantees
+- Repeated glowing cards
+- Decorative icon grids
+- Excessive pills, badges or floating controls
+- Generic AI brains, robots, shields and circuit imagery
+- Newsletter success states without a real subscription service
 
-### Modals
+## Delivery checklist
 
-```css
-.modal-overlay {
-  background: rgba(0, 0, 0, 0.5);
-  backdrop-filter: blur(4px);
-}
-
-.modal {
-  background: white;
-  border-radius: 16px;
-  padding: 32px;
-  box-shadow: var(--shadow-xl);
-  max-width: 500px;
-  width: 90%;
-}
-```
-
----
-
-## Style Guidelines
-
-**Style:** Exaggerated Minimalism
-
-**Keywords:** Bold minimalism, oversized typography, high contrast, negative space, loud minimal, statement design
-
-**Best For:** Fashion, architecture, portfolios, agency landing pages, luxury brands, editorial
-
-**Key Effects:** font-size: clamp(3rem 10vw 12rem), font-weight: 900, letter-spacing: -0.05em, massive whitespace
-
-### Page Pattern
-
-**Pattern Name:** Enterprise Gateway
-
-- **Conversion Strategy:** Path selection (I am a...). Mega menu navigation. Trust signals prominent.
-- **CTA Placement:** Contact Sales (Primary) + Login (Secondary)
-- **Section Order:** 1. Hero (Video/Mission), 2. Solutions by Industry, 3. Solutions by Role, 4. Client Logos, 5. Contact Sales
-
----
-
-## Anti-Patterns (Do NOT Use)
-
-- ❌ Playful design
-- ❌ Hidden credentials
-- ❌ AI purple/pink gradients
-
-### Additional Forbidden Patterns
-
-- ❌ **Emojis as icons** — Use SVG icons (Heroicons, Lucide, Simple Icons)
-- ❌ **Missing cursor:pointer** — All clickable elements must have cursor:pointer
-- ❌ **Layout-shifting hovers** — Avoid scale transforms that shift layout
-- ❌ **Low contrast text** — Maintain 4.5:1 minimum contrast ratio
-- ❌ **Instant state changes** — Always use transitions (150-300ms)
-- ❌ **Invisible focus states** — Focus states must be visible for a11y
-
----
-
-## Pre-Delivery Checklist
-
-Before delivering any UI code, verify:
-
-- [ ] No emojis used as icons (use SVG instead)
-- [ ] All icons from consistent icon set (Heroicons/Lucide)
-- [ ] `cursor-pointer` on all clickable elements
-- [ ] Hover states with smooth transitions (150-300ms)
-- [ ] Light mode: text contrast 4.5:1 minimum
-- [ ] Focus states visible for keyboard navigation
-- [ ] `prefers-reduced-motion` respected
-- [ ] Responsive: 375px, 768px, 1024px, 1440px
-- [ ] No content hidden behind fixed navbars
-- [ ] No horizontal scroll on mobile
+- Semantic heading order
+- Keyboard-operable navigation and disclosure controls
+- Visible focus states
+- Accurate alt text
+- No horizontal overflow at 375px
+- Responsive checks at 375px, 768px, 1024px and 1440px
+- Reduced-motion support
+- Valid internal links
+- No unsupported claims
+- Metadata, sitemap, privacy and terms aligned with current functionality

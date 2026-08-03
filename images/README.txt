@@ -1,14 +1,14 @@
-DROP YOUR IMAGES IN THIS FOLDER WITH THESE EXACT FILE NAMES:
+BQ TECHNOLOGIES — WEBSITE IMAGES
 
-  logo.png          -> BQ logo (used in header, footer, and browser tab icon)
-  team-benson.jpg   -> Benson (CEO)
-  team-queen.jpg    -> Queen Benson (Managing Director)
-  team-kelvin.jpg   -> Kelvin Kimaro (Product Manager)
-  team-johnson.jpg  -> Johnson Kimaro (Marketing Manager)
+Current production assets:
 
-Notes:
-- Until a photo is added, the site automatically shows a clean
-  initials circle (B, QB, KK, JK) — nothing looks broken.
-- Team photos look best as square images (e.g. 600x600 or larger).
-- .png also works for team photos, but then update the file name
-  in index.html to match.
+  logo.png                    Original high-resolution company logo
+  logo-web.png                Optimized website and favicon logo
+  og-bq-technologies.png      Social sharing preview
+  team-benson.jpg             Benson Kimaro
+  team-queen.jpg              Queen Benson
+  team-kelvin.jpg             Kelvin Kimaro
+  team-johnson.jpg            Johnson Kimaro
+
+Team photography should remain natural, consistently cropped and factual.
+Do not add fake product dashboards, statistics, clients or project imagery.

@@ -6,11 +6,6 @@
     <priority>1.0</priority>
   </url>
   <url>
-    <loc>https://bqtech.co.tz/contact.html</loc>
-    <changefreq>yearly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
     <loc>https://bqtech.co.tz/privacy.html</loc>
     <changefreq>yearly</changefreq>
     <priority>0.3</priority>
