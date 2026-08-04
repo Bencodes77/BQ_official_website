@@ -16,6 +16,11 @@
     <priority>0.8</priority>
   </url>
   <url>
+    <loc>https://bqtech.co.tz/how-we-work.html</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
     <loc>https://bqtech.co.tz/faq.html</loc>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
