@@ -533,6 +533,7 @@ img {
 
 .section-heading h2,
 .solutions-intro h2,
+.why-intro h2,
 .process-heading h2,
 .faq-heading h2,
 .company-intro h2 {
@@ -1033,10 +1034,115 @@ img {
   background: white;
 }
 
+.why-intro {
+  display: grid;
+  grid-template-columns: minmax(0, 0.52fr) minmax(0, 0.48fr);
+  gap: clamp(3rem, 6vw, 5.5rem);
+  align-items: center;
+}
+
+.why-lede {
+  max-width: 580px;
+  margin-top: 1.4rem;
+  color: var(--muted);
+  font-size: 0.98rem;
+}
+
+.why-strengths {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  margin-top: 2.5rem;
+  padding-top: 1.5rem;
+  border-top: 1px solid var(--line);
+}
+
+.why-strengths > div {
+  min-width: 0;
+  padding-right: 1rem;
+}
+
+.why-strengths > div + div {
+  padding-left: 1rem;
+  border-left: 1px solid var(--line);
+}
+
+.why-strengths span,
+.why-presence span,
+.why-media figcaption span,
+.process-media figcaption span,
+.company-media figcaption span {
+  display: block;
+  color: var(--accent);
+  font-size: 0.64rem;
+  font-weight: 700;
+  letter-spacing: 0.09em;
+  text-transform: uppercase;
+}
+
+.why-strengths h3 {
+  margin-top: 0.65rem;
+  font-size: 0.92rem;
+  letter-spacing: -0.02em;
+}
+
+.why-strengths p {
+  margin-top: 0.5rem;
+  color: var(--muted);
+  font-size: 0.73rem;
+  line-height: 1.55;
+}
+
+.why-media,
+.process-media,
+.company-media {
+  position: relative;
+  margin: 0;
+}
+
+.why-media {
+  padding-bottom: 3.75rem;
+}
+
+.why-media img,
+.process-media img,
+.company-media img {
+  width: 100%;
+  object-fit: cover;
+}
+
+.why-media img {
+  aspect-ratio: 3 / 2;
+}
+
+.why-media figcaption {
+  position: absolute;
+  right: 1.5rem;
+  bottom: 0;
+  width: min(78%, 360px);
+  padding: 1.5rem;
+  background: var(--navy-deep);
+  color: white;
+  box-shadow: 0 16px 34px rgba(16, 37, 52, 0.16);
+}
+
+.why-media figcaption strong {
+  display: block;
+  margin-top: 0.6rem;
+  font-size: 1.25rem;
+  line-height: 1.2;
+}
+
+.why-media figcaption p {
+  margin-top: 0.5rem;
+  color: rgba(255,255,255,0.68);
+  font-size: 0.78rem;
+}
+
 .why-grid {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   gap: 1.25rem;
+  margin-top: clamp(4rem, 7vw, 6rem);
 }
 
 .why-grid article {
@@ -1103,29 +1209,80 @@ img {
   text-transform: uppercase;
 }
 
+.why-presence {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  margin-top: 1.25rem;
+  padding: 1.5rem 0;
+  background: var(--navy-deep);
+  color: white;
+}
+
+.why-presence > div {
+  padding: 0 2rem;
+}
+
+.why-presence > div + div {
+  border-left: 1px solid var(--line-dark);
+}
+
+.why-presence strong {
+  display: block;
+  margin-top: 0.45rem;
+  font-size: 0.87rem;
+  font-weight: 600;
+  line-height: 1.4;
+}
+
 /* Process */
 .process {
   background: var(--mist);
 }
 
-.process-heading {
+.process-overview {
   display: grid;
-  grid-template-columns: minmax(0, 0.64fr) minmax(280px, 0.36fr);
-  align-items: end;
-  gap: 2rem;
-  margin-bottom: 4rem;
+  grid-template-columns: minmax(0, 0.42fr) minmax(0, 0.58fr);
+  gap: clamp(3rem, 6vw, 5.5rem);
+  align-items: center;
+}
+
+.process-heading {
+  display: block;
 }
 
 .process-heading > p {
+  max-width: 430px;
+  margin-top: 1.4rem;
   color: var(--muted);
   font-size: 0.92rem;
+}
+
+.process-media img {
+  aspect-ratio: 16 / 9;
+}
+
+.process-media figcaption,
+.company-media figcaption {
+  display: grid;
+  grid-template-columns: auto 1fr;
+  gap: 1.25rem;
+  align-items: center;
+  padding: 1rem 1.25rem;
+  background: var(--navy-deep);
+  color: white;
+}
+
+.process-media figcaption strong,
+.company-media figcaption strong {
+  font-size: 0.9rem;
+  font-weight: 600;
 }
 
 .process-list {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
   gap: 1rem;
-  margin: 0;
+  margin: 2rem 0 0;
   padding: 0;
   list-style: none;
 }
@@ -1179,18 +1336,19 @@ img {
 
 .company-intro {
   display: grid;
-  grid-template-columns: 0.58fr 0.42fr;
-  gap: 5rem;
-  align-items: end;
-}
-
-.company-summary > p:first-child {
-  font-size: 1.02rem;
+  grid-template-columns: minmax(0, 0.46fr) minmax(0, 0.54fr);
+  gap: clamp(3rem, 6vw, 5.5rem);
+  align-items: center;
 }
 
 .company-summary {
   display: grid;
   gap: 1rem;
+  margin-top: 2rem;
+}
+
+.company-summary > p:first-child {
+  font-size: 1.02rem;
 }
 
 .company-online {
@@ -1204,6 +1362,10 @@ img {
   font-size: 0.69rem;
   letter-spacing: 0.08em;
   text-transform: uppercase;
+}
+
+.company-media img {
+  aspect-ratio: 3 / 2;
 }
 
 .about-pillars {
@@ -1765,8 +1927,13 @@ img {
   .service-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
   .services-layout, .faq-layout { grid-template-columns: 1fr; }
   .solution-list { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+  .why-intro, .process-overview { grid-template-columns: 1fr; }
+  .why-intro-copy { max-width: 760px; }
+  .why-media, .process-media { max-width: 820px; }
   .process-list { grid-template-columns: repeat(2, minmax(0, 1fr)); }
   .company-intro { grid-template-columns: 1fr; gap: 2rem; }
+  .company-story-copy { max-width: 760px; }
+  .company-media { max-width: 820px; }
   .team-grid { grid-template-columns: repeat(2, 1fr); gap: 2.5rem 1.25rem; }
   .contact-panel { grid-template-columns: 1fr; }
   .footer-main { grid-template-columns: 1.2fr repeat(3, 0.8fr); gap: 2rem; }
@@ -1800,11 +1967,20 @@ img {
   .solution-list { grid-template-columns: 1fr; }
   .solution-card { min-height: 490px; }
   .solution-dialog-grid { grid-template-columns: 1fr; }
+  .why-strengths { grid-template-columns: 1fr; gap: 1rem; }
+  .why-strengths > div { padding: 0; }
+  .why-strengths > div + div { padding: 1rem 0 0; border-top: 1px solid var(--line); border-left: 0; }
+  .why-media { padding-bottom: 0; }
+  .why-media figcaption { position: static; width: 100%; box-shadow: none; }
   .why-grid { grid-template-columns: 1fr; }
   .why-grid article { min-height: 330px; padding: 1.5rem; }
   .why-grid h3 { margin-top: 2.5rem; }
+  .why-presence { grid-template-columns: 1fr; padding: 0; }
+  .why-presence > div { padding: 1.2rem 1.5rem; }
+  .why-presence > div + div { border-top: 1px solid var(--line-dark); border-left: 0; }
   .process-heading { display: block; }
   .process-heading > p { margin-top: 1.25rem; }
+  .process-media figcaption, .company-media figcaption { grid-template-columns: 1fr; gap: 0.35rem; }
   .process-list { grid-template-columns: 1fr; }
   .process-list li { min-height: 300px; padding: 1.5rem; }
   .process-list h3 { margin-top: 2.5rem; }

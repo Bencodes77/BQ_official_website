@@ -22,7 +22,11 @@ Current production assets:
   team-queen.jpg              Queen Benson
   team-kelvin.jpg             Kelvin Kimaro
   team-johnson.jpg            Johnson Kimaro
+  bq-leadership-office.jpg    BQ leadership office image supplied for the project
+  bq-team-office.jpg          BQ team office image supplied for the project
+  bq-work-session.jpg         BQ staff collaboration image supplied for the project
 
+The three BQ office images were prepared as web ready crops from the user supplied references.
 Team photography should remain natural, consistently cropped and factual.
 Do not add fake product dashboards, statistics, clients or project imagery.
 
