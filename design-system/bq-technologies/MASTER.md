@@ -2,7 +2,7 @@
 
 ## Direction
 
-Clear, established and approachable. The website uses a light corporate identity, direct photography, strong information hierarchy and familiar interaction patterns. It should feel like a real Tanzanian technology business—not an abstract startup template.
+Clear, established and approachable. The website uses a light corporate identity, direct photography, strong information hierarchy and familiar interaction patterns. Selective glass surfaces and restrained depth can add polish where real imagery or layered backgrounds support them. It should feel like a real Tanzanian technology business, not an abstract startup template.
 
 ## Principles
 
@@ -29,7 +29,7 @@ Clear, established and approachable. The website uses a light corporate identity
 | WhatsApp brand | `#1FB75B` |
 | Border | `#DCE3E6` |
 
-The vermilion accent is used for primary actions, section labels, small rules and focus states. Avoid gradients, neon colours and decorative glow.
+The vermilion accent is used for primary actions, section labels, small rules and focus states. Transparent gradients are reserved for subtle glass depth. Avoid neon colours and decorative glow.
 
 ## Typography
 
@@ -57,11 +57,11 @@ A narrow navy contact bar sits above a white sticky navigation bar. Navigation i
 
 ### Hero
 
-Two-column layout with direct business copy and real Tanzania photography. No abstract orbit, fake interface, dashboard, gradient headline or glass panel.
+Two-column layout with direct business copy and real Tanzania photography. A restrained glass copy panel may be used for readability and depth. No fake interface, dashboard or gradient headline.
 
 ### Service grid
 
-Simple bordered service blocks with consistent line icons. Cards do not float, glow or use heavy shadows.
+Simple bordered service blocks with consistent line icons. Cards may lift and tilt slightly on precise pointer devices, but should not glow or use heavy shadows.
 
 ### Buttons
 
@@ -79,7 +79,8 @@ Use the dedicated floating green WhatsApp control with an accessible label. Do n
 
 - Content reveal: 600ms with 18px maximum travel
 - Control feedback: 180ms
-- No looping effects, parallax or animated backgrounds
+- One slow hero image drift is acceptable on desktop when it is disabled on mobile
+- Restrained three dimensional hover movement is allowed on precise pointer devices
 - Respect `prefers-reduced-motion`
 
 ## Avoid
@@ -90,7 +91,8 @@ Use the dedicated floating green WhatsApp control with an accessible label. Do n
 - Fake dashboards, terminals and charts
 - Unsupported statistics or guarantees
 - Excessive rounded cards
-- Glassmorphism and glow
+- Glass effects without real visual depth behind them
+- Excessive three dimensional movement or decorative glow
 - Multiple competing accents
 - Newsletter success states without a real service
 
