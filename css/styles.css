@@ -2025,42 +2025,7 @@ img {
 .redirect-actions { display: flex; flex-wrap: wrap; justify-content: center; gap: 1rem; margin-top: 2rem; }
 .redirect-actions .text-link { min-height: 52px; border-bottom: 0; padding-inline: 1rem; }
 
-/* Dedicated About and FAQ pages */
-.inner-page-body {
-  background: white;
-}
-
-.page-banner {
-  padding: clamp(4rem, 7vw, 6.5rem) 0;
-  background: var(--navy-deep);
-  color: white;
-}
-
-.page-banner-inner {
-  display: grid;
-  grid-template-columns: minmax(0, 0.68fr) minmax(280px, 0.32fr);
-  gap: 3rem;
-  align-items: end;
-}
-
-.page-banner .section-label {
-  grid-column: 1 / -1;
-  margin-bottom: -1.5rem;
-  color: #ff927e;
-}
-
-.page-banner h1 {
-  max-width: 820px;
-  font-size: clamp(3rem, 5.5vw, 5.6rem);
-  line-height: 0.98;
-  letter-spacing: -0.055em;
-}
-
-.page-banner-inner > p:last-child {
-  max-width: 430px;
-  color: rgba(255,255,255,0.72);
-}
-
+/* About and FAQ sections */
 .company-page,
 .faq-page {
   padding: 2rem 0 4rem;
@@ -2102,36 +2067,7 @@ img {
   padding: clamp(1.75rem, 3.5vw, 3rem);
 }
 
-.page-cta {
-  background: var(--navy-deep);
-  color: white;
-}
-
-.page-cta-inner {
-  display: flex;
-  min-height: 220px;
-  align-items: center;
-  justify-content: space-between;
-  gap: 3rem;
-  padding-top: 2.5rem;
-  padding-bottom: 2.5rem;
-}
-
-.page-cta-inner p {
-  color: #ff927e;
-  font-size: 0.7rem;
-  font-weight: 700;
-  letter-spacing: 0.1em;
-  text-transform: uppercase;
-}
-
-.page-cta-inner h2 {
-  max-width: 720px;
-  margin-top: 0.5rem;
-  font-size: clamp(2rem, 3.5vw, 3.5rem);
-}
-
-/* Dedicated Why BQ page */
+/* Why BQ section */
 .why-page-hero {
   overflow: hidden;
   padding: clamp(3rem, 5vw, 5rem) 0 0;
@@ -2315,7 +2251,7 @@ img {
   margin-top: 0;
 }
 
-/* Dedicated How We Work page */
+/* How We Work section */
 .work-page-hero {
   padding: 2rem 0;
   background: var(--mist);
@@ -2551,14 +2487,9 @@ img {
   .footer-cta { align-items: flex-start; flex-direction: column; }
   .footer-main { grid-template-columns: repeat(2, 1fr); }
   .footer-brand { grid-column: 1 / -1; }
-  .page-banner { padding: 4rem 0; }
-  .page-banner-inner { grid-template-columns: 1fr; gap: 1.25rem; }
-  .page-banner .section-label { grid-column: auto; margin-bottom: 0; }
-  .page-banner h1 { font-size: clamp(3rem, 13vw, 4.8rem); }
   .about-page-panel { grid-template-columns: 1fr; }
   .about-page-panel .about-pillars { grid-column: auto; grid-template-columns: 1fr; }
   .about-page-panel .about-pillar { min-height: 0; padding: 1.5rem; }
-  .page-cta-inner { align-items: flex-start; flex-direction: column; justify-content: center; gap: 1.5rem; }
   .why-page-hero { padding-top: 2.5rem; }
   .why-page-layout { grid-template-columns: 1fr; }
   .why-page-copy { padding: 1rem 0 2.5rem; }
