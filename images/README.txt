@@ -12,6 +12,12 @@ Current production assets:
   solution-healthcare.jpg     Modern healthcare facility / Pexels
   solution-logistics.jpg      Warehouse operations / Pexels
   solution-hospitality.jpg    Hotel reception / Pexels
+  solution-ngo.jpg            Community outreach team / Pexels
+  solution-microfinance.jpg   Local small business owner / Pexels
+  solution-engineering.jpg    African engineering team / Pexels
+  solution-computers.jpg      Custom computer components / Pexels
+  solution-insurance.jpg      Insurance consultation / Pexels
+  solution-government.jpg     African professional team meeting / Pexels
   team-benson.jpg             Benson Kimaro
   team-queen.jpg              Queen Benson
   team-kelvin.jpg             Kelvin Kimaro
@@ -29,3 +35,9 @@ Solutions sources:
   https://www.pexels.com/photo/hallway-of-a-hospital-5203594/
   https://www.pexels.com/photo/warehouse-with-forklift-and-packages-30824313/
   https://www.pexels.com/photo/interior-of-a-hotel-reception-7821345/
+  https://www.pexels.com/photo/community-distribution-event-with-volunteers-35043674/
+  https://www.pexels.com/photo/african-woman-working-in-nairobi-market-stall-33569520/
+  https://www.pexels.com/photo/team-of-engineers-reviewing-construction-plans-37198880/
+  https://www.pexels.com/photo/computer-components-6716692/
+  https://www.pexels.com/photo/a-woman-explaining-the-document-7735626/
+  https://www.pexels.com/photo/office-team-having-a-meeting-3869649/

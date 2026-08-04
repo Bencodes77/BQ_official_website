@@ -45,6 +45,10 @@ body.menu-open {
   overflow: hidden;
 }
 
+body.dialog-open {
+  overflow: hidden;
+}
+
 h1,
 h2,
 h3,
@@ -814,7 +818,9 @@ img {
 
 .solution-card:first-child > img { object-position: center 58%; }
 .solution-card:nth-child(3) > img { object-position: center 54%; }
-.solution-card:last-child > img { object-position: center 42%; }
+.solution-card:nth-child(6) > img { object-position: center 42%; }
+.solution-card:nth-child(8) > img { object-position: center 44%; }
+.solution-card:nth-child(10) > img { object-position: center 48%; }
 
 .solution-card-body {
   position: relative;
@@ -848,27 +854,178 @@ img {
   line-height: 1.65;
 }
 
-.solution-card a {
+.solution-learn {
+  width: 100%;
   display: flex;
   align-items: center;
   justify-content: space-between;
   gap: 1rem;
   margin-top: auto;
   padding-top: 1.15rem;
+  padding-right: 0;
+  padding-bottom: 0;
+  padding-left: 0;
   border-top: 1px solid var(--line);
+  border-right: 0;
+  border-bottom: 0;
+  border-left: 0;
+  background: transparent;
   color: var(--accent-dark);
   font-size: 0.8rem;
   font-weight: 700;
+  text-align: left;
 }
 
-.solution-card a span {
+.solution-learn span {
   font-size: 1rem;
   transition: transform 280ms ease;
 }
 
-.solution-card:hover a span,
-.solution-card:focus-within a span {
+.solution-card:hover .solution-learn span,
+.solution-card:focus-within .solution-learn span {
   transform: translateX(5px);
+}
+
+/* Solution detail panel */
+.solution-dialog {
+  width: min(calc(100% - 40px), 900px);
+  max-height: min(88vh, 820px);
+  padding: 0;
+  overflow: auto;
+  border: 0;
+  border-radius: 8px;
+  background: white;
+  color: var(--ink);
+  box-shadow: 0 35px 90px rgba(8, 24, 34, 0.32);
+}
+
+.solution-dialog::backdrop {
+  background: rgba(10, 30, 43, 0.7);
+  backdrop-filter: blur(4px);
+}
+
+.solution-dialog[open] {
+  animation: solutionDialogIn 280ms var(--ease);
+}
+
+@keyframes solutionDialogIn {
+  from { opacity: 0; transform: translateY(18px) scale(0.985); }
+  to { opacity: 1; transform: none; }
+}
+
+.solution-dialog-shell {
+  padding: clamp(1.5rem, 4vw, 3.4rem);
+}
+
+.solution-dialog-close {
+  display: flex;
+  align-items: center;
+  gap: 0.55rem;
+  margin-left: auto;
+  padding: 0.45rem 0;
+  border: 0;
+  border-bottom: 1px solid var(--line);
+  background: transparent;
+  color: var(--muted);
+  font-size: 0.74rem;
+  font-weight: 700;
+}
+
+.solution-dialog-close span {
+  color: var(--accent);
+  font-size: 0.95rem;
+}
+
+.solution-dialog-heading {
+  max-width: 760px;
+  margin-top: 1.5rem;
+}
+
+.solution-dialog-heading h2 {
+  font-size: clamp(2.2rem, 5vw, 4rem);
+}
+
+.solution-dialog-heading > p:last-child {
+  max-width: 720px;
+  margin-top: 1.2rem;
+  color: var(--muted);
+  font-size: 1rem;
+}
+
+.solution-dialog-grid {
+  display: grid;
+  grid-template-columns: minmax(0, 0.58fr) minmax(0, 0.42fr);
+  gap: 1px;
+  margin-top: 2.4rem;
+  border: 1px solid var(--line);
+  background: var(--line);
+}
+
+.solution-dialog-capabilities,
+.solution-dialog-fit {
+  padding: clamp(1.4rem, 3vw, 2rem);
+  background: white;
+}
+
+.solution-dialog-capabilities h3 {
+  font-size: 1.05rem;
+}
+
+.solution-dialog-capabilities ul {
+  display: grid;
+  gap: 0.9rem;
+  margin: 1.25rem 0 0;
+  padding: 0;
+  list-style: none;
+}
+
+.solution-dialog-capabilities li {
+  position: relative;
+  padding-left: 1.35rem;
+  color: var(--ink-soft);
+  font-size: 0.88rem;
+}
+
+.solution-dialog-capabilities li::before {
+  content: "";
+  position: absolute;
+  top: 0.62rem;
+  left: 0;
+  width: 7px;
+  height: 7px;
+  border: 2px solid var(--accent);
+  border-radius: 50%;
+}
+
+.solution-dialog-fit {
+  background: var(--warm);
+}
+
+.solution-dialog-label {
+  color: var(--accent);
+  font-size: 0.68rem;
+  font-weight: 700;
+  letter-spacing: 0.11em;
+  text-transform: uppercase;
+}
+
+.solution-dialog-fit > p:nth-child(2) {
+  margin-top: 0.8rem;
+  color: var(--ink);
+  font-size: 0.9rem;
+  font-weight: 600;
+}
+
+.solution-dialog-note {
+  margin-top: 1.5rem;
+  padding-top: 1.5rem;
+  border-top: 1px solid #ded8cf;
+  color: var(--muted);
+  font-size: 0.8rem;
+}
+
+.solution-dialog-cta {
+  margin-top: 2rem;
 }
 
 /* Why BQ */
@@ -1483,6 +1640,7 @@ img {
   .service-cta { margin-right: -1.5rem; margin-left: -1.5rem; }
   .solution-list { grid-template-columns: 1fr; }
   .solution-card { min-height: 490px; }
+  .solution-dialog-grid { grid-template-columns: 1fr; }
   .why-grid { grid-template-columns: 1fr; }
   .why-grid article, .why-grid article + article { min-height: auto; padding: 2rem 0 2.5rem; border-right: 0; border-bottom: 1px solid var(--line); }
   .why-grid h3 { margin-top: 3rem; }
@@ -1513,6 +1671,9 @@ img {
   .hero-location { margin-top: 3.25rem; }
   .service-card { min-height: 330px; }
   .solution-card { min-height: 470px; }
+  .solution-dialog { width: min(calc(100% - 16px), 900px); max-height: calc(100vh - 16px); }
+  .solution-dialog-shell { padding: 1.25rem; }
+  .solution-dialog-heading h2 { font-size: 2.15rem; }
   .team-grid { grid-template-columns: 1fr; }
   .team-member { display: grid; grid-template-columns: 92px 1fr; align-items: center; gap: 1rem; }
   .team-member img { width: 92px; height: 105px; }

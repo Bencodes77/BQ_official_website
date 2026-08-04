@@ -178,7 +178,7 @@
               <p class="solution-sector">Education</p>
               <h3>School and education operations</h3>
               <p>Bring student records, fees, learning workflows and communication into one connected system.</p>
-              <a href="#contact">Discuss this solution <span aria-hidden="true">→</span></a>
+              <button class="solution-learn" type="button" data-solution="education" aria-haspopup="dialog">Learn more <span aria-hidden="true">→</span></button>
             </div>
           </article>
           <article class="solution-card reveal">
@@ -187,7 +187,7 @@
               <p class="solution-sector">Finance</p>
               <h3>Finance and professional services</h3>
               <p>Improve reporting, approvals, customer records and everyday operations with secure digital workflows.</p>
-              <a href="#contact">Discuss this solution <span aria-hidden="true">→</span></a>
+              <button class="solution-learn" type="button" data-solution="finance" aria-haspopup="dialog">Learn more <span aria-hidden="true">→</span></button>
             </div>
           </article>
           <article class="solution-card reveal">
@@ -196,7 +196,7 @@
               <p class="solution-sector">Retail</p>
               <h3>Retail and inventory</h3>
               <p>Gain clearer stock visibility, simpler sales workflows and stronger purchasing and operational reporting.</p>
-              <a href="#contact">Discuss this solution <span aria-hidden="true">→</span></a>
+              <button class="solution-learn" type="button" data-solution="retail" aria-haspopup="dialog">Learn more <span aria-hidden="true">→</span></button>
             </div>
           </article>
           <article class="solution-card reveal">
@@ -205,7 +205,7 @@
               <p class="solution-sector">Healthcare</p>
               <h3>Healthcare organisations</h3>
               <p>Support administration, records, scheduling and service delivery with dependable digital tools.</p>
-              <a href="#contact">Discuss this solution <span aria-hidden="true">→</span></a>
+              <button class="solution-learn" type="button" data-solution="healthcare" aria-haspopup="dialog">Learn more <span aria-hidden="true">→</span></button>
             </div>
           </article>
           <article class="solution-card reveal">
@@ -214,7 +214,7 @@
               <p class="solution-sector">Logistics</p>
               <h3>Logistics and field operations</h3>
               <p>Track inventory, field activity, movement and updates across teams working in different locations.</p>
-              <a href="#contact">Discuss this solution <span aria-hidden="true">→</span></a>
+              <button class="solution-learn" type="button" data-solution="logistics" aria-haspopup="dialog">Learn more <span aria-hidden="true">→</span></button>
             </div>
           </article>
           <article class="solution-card reveal">
@@ -223,7 +223,61 @@
               <p class="solution-sector">Hospitality</p>
               <h3>Hospitality and service businesses</h3>
               <p>Connect booking, customer, payment and operational experiences for smoother everyday service.</p>
-              <a href="#contact">Discuss this solution <span aria-hidden="true">→</span></a>
+              <button class="solution-learn" type="button" data-solution="hospitality" aria-haspopup="dialog">Learn more <span aria-hidden="true">→</span></button>
+            </div>
+          </article>
+          <article class="solution-card reveal">
+            <img src="images/solution-ngo.jpg" alt="Community organisation team coordinating an outreach event" loading="lazy">
+            <div class="solution-card-body">
+              <p class="solution-sector">Nonprofit</p>
+              <h3>NGO software solutions</h3>
+              <p>Coordinate programmes, field teams, beneficiary information and donor reporting more clearly.</p>
+              <button class="solution-learn" type="button" data-solution="ngo" aria-haspopup="dialog">Learn more <span aria-hidden="true">→</span></button>
+            </div>
+          </article>
+          <article class="solution-card reveal">
+            <img src="images/solution-microfinance.jpg" alt="Small business owner managing goods at a local market" loading="lazy">
+            <div class="solution-card-body">
+              <p class="solution-sector">Microfinance</p>
+              <h3>Microfinance operations</h3>
+              <p>Support customer onboarding, loan workflows, repayments and reporting with a secure business system.</p>
+              <button class="solution-learn" type="button" data-solution="microfinance" aria-haspopup="dialog">Learn more <span aria-hidden="true">→</span></button>
+            </div>
+          </article>
+          <article class="solution-card reveal">
+            <img src="images/solution-engineering.jpg" alt="Engineering team reviewing project plans together" loading="lazy">
+            <div class="solution-card-body">
+              <p class="solution-sector">Engineering</p>
+              <h3>Engineering companies</h3>
+              <p>Connect project records, site reporting, document control and technical team workflows.</p>
+              <button class="solution-learn" type="button" data-solution="engineering" aria-haspopup="dialog">Learn more <span aria-hidden="true">→</span></button>
+            </div>
+          </article>
+          <article class="solution-card reveal">
+            <img src="images/solution-computers.jpg" alt="High performance custom computer components and cooling system" loading="lazy">
+            <div class="solution-card-body">
+              <p class="solution-sector">Computing</p>
+              <h3>Custom computer builds</h3>
+              <p>Purpose built computers for gaming, AI, engineering, editing and demanding business work.</p>
+              <button class="solution-learn" type="button" data-solution="computers" aria-haspopup="dialog">Learn more <span aria-hidden="true">→</span></button>
+            </div>
+          </article>
+          <article class="solution-card reveal">
+            <img src="images/solution-insurance.jpg" alt="Insurance advisor explaining a policy to customers" loading="lazy">
+            <div class="solution-card-body">
+              <p class="solution-sector">Insurance</p>
+              <h3>Insurance service software</h3>
+              <p>Organise client records, policy workflows, renewals, claims activity and management reporting.</p>
+              <button class="solution-learn" type="button" data-solution="insurance" aria-haspopup="dialog">Learn more <span aria-hidden="true">→</span></button>
+            </div>
+          </article>
+          <article class="solution-card reveal">
+            <img src="images/solution-government.jpg" alt="Public institution team taking part in a digital presentation" loading="lazy">
+            <div class="solution-card-body">
+              <p class="solution-sector">Public sector</p>
+              <h3>Government and public institutions</h3>
+              <p>Improve service requests, internal approvals, records and reporting with responsible digital systems.</p>
+              <button class="solution-learn" type="button" data-solution="government" aria-haspopup="dialog">Learn more <span aria-hidden="true">→</span></button>
             </div>
           </article>
         </div>
@@ -311,6 +365,29 @@
       </div>
     </section>
   </main>
+
+  <dialog class="solution-dialog" id="solutionDialog" aria-labelledby="solutionDialogTitle" aria-describedby="solutionDialogIntro">
+    <div class="solution-dialog-shell">
+      <button class="solution-dialog-close" id="solutionDialogClose" type="button">Close panel <span aria-hidden="true">↑</span></button>
+      <div class="solution-dialog-heading">
+        <p class="section-label" id="solutionDialogSector">Solution</p>
+        <h2 id="solutionDialogTitle">Solution details</h2>
+        <p id="solutionDialogIntro"></p>
+      </div>
+      <div class="solution-dialog-grid">
+        <div class="solution-dialog-capabilities">
+          <h3>What BQ can deliver</h3>
+          <ul id="solutionDialogCapabilities"></ul>
+        </div>
+        <div class="solution-dialog-fit">
+          <p class="solution-dialog-label">Designed for</p>
+          <p id="solutionDialogAudience"></p>
+          <p class="solution-dialog-note">The final system and feature set would be shaped around your organisation’s actual workflow, users and priorities.</p>
+        </div>
+      </div>
+      <a class="button solution-dialog-cta" id="solutionDialogCta" href="#contact">Talk to BQ about this <span aria-hidden="true">→</span></a>
+    </div>
+  </dialog>
 
   <footer class="site-footer">
     <div class="shell footer-cta">
