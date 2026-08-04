@@ -127,7 +127,7 @@ img {
 }
 
 .section {
-  padding: clamp(5.5rem, 9vw, 8.5rem) 0;
+  padding: clamp(4rem, 6.5vw, 6.5rem) 0;
 }
 
 .section-label {
@@ -412,6 +412,22 @@ img {
   max-width: none;
   object-fit: cover;
   object-position: center 48%;
+  animation: hero-image-drift 26s ease-in-out infinite alternate;
+  transform: scale(1.035);
+  transform-origin: center;
+  will-change: transform;
+}
+
+@keyframes hero-image-drift {
+  0% {
+    transform: scale(1.035) translate3d(0, 0, 0);
+  }
+  50% {
+    transform: scale(1.065) translate3d(-0.5%, -0.35%, 0);
+  }
+  100% {
+    transform: scale(1.09) translate3d(0.65%, -0.7%, 0);
+  }
 }
 
 .hero-grid {
@@ -755,6 +771,7 @@ img {
 /* Solutions */
 .solutions {
   background: var(--warm);
+  padding-bottom: clamp(3.5rem, 5vw, 5rem);
 }
 
 .solutions-intro {
@@ -1032,6 +1049,8 @@ img {
 /* Why BQ */
 .why {
   background: white;
+  padding-top: clamp(3.5rem, 5vw, 5rem);
+  padding-bottom: clamp(3.5rem, 5vw, 5rem);
 }
 
 .why-intro {
@@ -1100,7 +1119,20 @@ img {
 }
 
 .why-media {
+  isolation: isolate;
   padding-bottom: 3.75rem;
+}
+
+.why-media::before {
+  content: "";
+  position: absolute;
+  right: -1rem;
+  bottom: 1.5rem;
+  z-index: -1;
+  width: 42%;
+  height: 48%;
+  background-image: radial-gradient(rgba(22, 48, 68, 0.18) 1.2px, transparent 1.2px);
+  background-size: 12px 12px;
 }
 
 .why-media img,
@@ -1147,7 +1179,7 @@ img {
 
 .why-grid article {
   display: flex;
-  min-height: 360px;
+  min-height: 330px;
   flex-direction: column;
   padding: 2rem;
   border: 1px solid #e4ded4;
@@ -1182,7 +1214,7 @@ img {
 
 .why-grid h3 {
   max-width: 290px;
-  margin-top: 2.8rem;
+  margin-top: 2.25rem;
   font-size: 1.5rem;
 }
 
@@ -1237,6 +1269,8 @@ img {
 /* Process */
 .process {
   background: var(--mist);
+  padding-top: clamp(3.5rem, 5vw, 5rem);
+  padding-bottom: clamp(3.5rem, 5vw, 5rem);
 }
 
 .process-overview {
@@ -1289,7 +1323,7 @@ img {
 
 .process-list li {
   display: flex;
-  min-height: 330px;
+  min-height: 305px;
   flex-direction: column;
   padding: 1.6rem;
   border: 1px solid #d3dde0;
@@ -1927,9 +1961,6 @@ img {
   .service-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
   .services-layout, .faq-layout { grid-template-columns: 1fr; }
   .solution-list { grid-template-columns: repeat(2, minmax(0, 1fr)); }
-  .why-intro, .process-overview { grid-template-columns: 1fr; }
-  .why-intro-copy { max-width: 760px; }
-  .why-media, .process-media { max-width: 820px; }
   .process-list { grid-template-columns: repeat(2, minmax(0, 1fr)); }
   .company-intro { grid-template-columns: 1fr; gap: 2rem; }
   .company-story-copy { max-width: 760px; }
@@ -1941,7 +1972,7 @@ img {
 
 @media (max-width: 760px) {
   .shell, .legal-content { width: min(calc(100% - 32px), var(--shell)); }
-  .section { padding: 5rem 0; }
+  .section { padding: 4rem 0; }
   .utility-inner > p { display: none; }
   .utility-inner { justify-content: flex-end; }
   .utility-inner a:first-child { display: none; }
@@ -1967,23 +1998,9 @@ img {
   .solution-list { grid-template-columns: 1fr; }
   .solution-card { min-height: 490px; }
   .solution-dialog-grid { grid-template-columns: 1fr; }
-  .why-strengths { grid-template-columns: 1fr; gap: 1rem; }
-  .why-strengths > div { padding: 0; }
-  .why-strengths > div + div { padding: 1rem 0 0; border-top: 1px solid var(--line); border-left: 0; }
-  .why-media { padding-bottom: 0; }
-  .why-media figcaption { position: static; width: 100%; box-shadow: none; }
-  .why-grid { grid-template-columns: 1fr; }
-  .why-grid article { min-height: 330px; padding: 1.5rem; }
-  .why-grid h3 { margin-top: 2.5rem; }
-  .why-presence { grid-template-columns: 1fr; padding: 0; }
-  .why-presence > div { padding: 1.2rem 1.5rem; }
-  .why-presence > div + div { border-top: 1px solid var(--line-dark); border-left: 0; }
   .process-heading { display: block; }
   .process-heading > p { margin-top: 1.25rem; }
-  .process-media figcaption, .company-media figcaption { grid-template-columns: 1fr; gap: 0.35rem; }
-  .process-list { grid-template-columns: 1fr; }
-  .process-list li { min-height: 300px; padding: 1.5rem; }
-  .process-list h3 { margin-top: 2.5rem; }
+  .company-media figcaption { grid-template-columns: 1fr; gap: 0.35rem; }
   .about-pillars { grid-template-columns: 1fr; }
   .about-pillar { min-height: 340px; padding: 1.5rem; }
   .team-heading { display: block; }
@@ -1992,6 +2009,93 @@ img {
   .footer-cta { align-items: flex-start; flex-direction: column; }
   .footer-main { grid-template-columns: repeat(2, 1fr); }
   .footer-brand { grid-column: 1 / -1; }
+}
+
+@media (max-width: 620px) {
+  .why-intro,
+  .process-overview {
+    grid-template-columns: 1fr;
+    gap: 2.25rem;
+  }
+
+  .why-media,
+  .process-media {
+    max-width: none;
+  }
+
+  .why-media::before {
+    right: -0.5rem;
+  }
+
+  .why-strengths {
+    grid-template-columns: 1fr;
+    gap: 1rem;
+  }
+
+  .why-strengths > div {
+    padding: 0;
+  }
+
+  .why-strengths > div + div {
+    padding: 1rem 0 0;
+    border-top: 1px solid var(--line);
+    border-left: 0;
+  }
+
+  .why-media {
+    padding-bottom: 0;
+  }
+
+  .why-media figcaption {
+    position: static;
+    width: 100%;
+    box-shadow: none;
+  }
+
+  .why-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .why-grid article {
+    min-height: 330px;
+    padding: 1.5rem;
+  }
+
+  .why-grid h3 {
+    margin-top: 2.5rem;
+  }
+
+  .why-presence {
+    grid-template-columns: 1fr;
+    padding: 0;
+  }
+
+  .why-presence > div {
+    padding: 1.2rem 1.5rem;
+  }
+
+  .why-presence > div + div {
+    border-top: 1px solid var(--line-dark);
+    border-left: 0;
+  }
+
+  .process-media figcaption {
+    grid-template-columns: 1fr;
+    gap: 0.35rem;
+  }
+
+  .process-list {
+    grid-template-columns: 1fr;
+  }
+
+  .process-list li {
+    min-height: 300px;
+    padding: 1.5rem;
+  }
+
+  .process-list h3 {
+    margin-top: 2.5rem;
+  }
 }
 
 @media (max-width: 520px) {
@@ -2004,6 +2108,7 @@ img {
       linear-gradient(180deg, rgba(9, 30, 43, 0.12) 35%, rgba(9, 30, 43, 0.48) 100%);
   }
   .hero-media img { object-position: 56% center; }
+  .hero-media img { animation-duration: 32s; }
   .hero-actions { align-items: flex-start; flex-direction: column; }
   .hero-actions .button { width: 100%; }
   .hero-location { margin-top: 3.25rem; }
@@ -2028,4 +2133,5 @@ img {
   html { scroll-behavior: auto; }
   *, *::before, *::after { animation-duration: 0.01ms !important; animation-iteration-count: 1 !important; scroll-behavior: auto !important; transition-duration: 0.01ms !important; }
   .motion-ready .reveal { opacity: 1; transform: none; }
+  .hero-media img { animation: none; transform: none; will-change: auto; }
 }
