@@ -79,4 +79,15 @@
 
     sections.forEach(function (section) { sectionObserver.observe(section); });
   }
+
+  var serviceSelect = document.getElementById("cfService");
+  var serviceLinks = document.querySelectorAll(".service-cta[data-service]");
+
+  if (serviceSelect && serviceLinks.length) {
+    serviceLinks.forEach(function (link) {
+      link.addEventListener("click", function () {
+        serviceSelect.value = link.getAttribute("data-service") || "";
+      });
+    });
+  }
 })();
