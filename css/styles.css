@@ -1502,6 +1502,7 @@ img {
   display: flex;
   margin: 0;
   flex-direction: column;
+  align-self: start;
   border: 1px solid #e0d9cf;
   border-radius: 6px;
   overflow: hidden;
@@ -1510,8 +1511,10 @@ img {
 
 .faq-media img {
   width: 100%;
-  flex: 1;
-  min-height: 260px;
+  height: auto;
+  min-height: 0;
+  flex: none;
+  aspect-ratio: 3 / 2;
   object-fit: cover;
   object-position: center;
 }
@@ -1976,7 +1979,7 @@ img {
 .why-page-layout {
   display: grid;
   grid-template-columns: minmax(0, 0.53fr) minmax(0, 0.47fr);
-  align-items: stretch;
+  align-items: center;
 }
 
 .why-page-copy {
@@ -2047,8 +2050,11 @@ img {
 
 .why-page-media {
   position: relative;
-  min-height: 650px;
+  display: flex;
+  min-height: 0;
   margin: 0;
+  flex-direction: column;
+  align-self: center;
 }
 
 .why-page-media::before {
@@ -2066,18 +2072,19 @@ img {
 
 .why-page-media img {
   width: 100%;
-  height: 100%;
+  height: auto;
+  aspect-ratio: 3 / 2;
   border-radius: 180px 0 0 0;
   object-fit: cover;
   object-position: center;
 }
 
 .why-page-media figcaption {
-  position: absolute;
-  bottom: 2.5rem;
+  position: relative;
   left: -3.25rem;
   z-index: 2;
   width: min(360px, 78%);
+  margin-top: -1.5rem;
   padding: 1.6rem;
   border: 1px solid var(--accent);
   border-radius: 0 22px 22px 22px;
@@ -2254,7 +2261,7 @@ img {
   .why-page-copy { padding: 1rem 0 2.5rem; }
   .why-page-media { min-height: 0; }
   .why-page-media img { aspect-ratio: 3 / 2; border-radius: 80px 0 0; }
-  .why-page-media figcaption { position: static; width: 100%; border-radius: 0; box-shadow: none; }
+  .why-page-media figcaption { position: static; width: 100%; margin-top: 0; border-radius: 0; box-shadow: none; }
   .why-page-media::before { display: none; }
   .why-page-facts { grid-template-columns: repeat(2, minmax(0, 1fr)); border-top: 1px solid #e5ded4; }
   .why-page-facts > div:nth-child(3) { border-left: 0; }
